@@ -1,6 +1,6 @@
 import numpy as np
 import pandas as pd
-
+from implicit.als import AlternatingLeastSquares
 
 def add_fiction_id(data, take_n_popular):
     popularity_n = data.groupby('item_id')['quantity'].sum().reset_index()
